@@ -4,6 +4,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 
 const PlayerRoutes = require("./routes/PlayerRoutes");
+const CountriesRoutes = require("./routes/CountriesRoutes");
 
 const app = express();
 
@@ -15,5 +16,6 @@ app.use(helmet());
 
 //Routes
 app.use("/api", PlayerRoutes);
+app.use("/api", CountriesRoutes);
 
 module.exports = app;
